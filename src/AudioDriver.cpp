@@ -19,7 +19,7 @@ int AudioDriver::setup(int fs, int channelCount, int bitClkPin, int lrClkPin, in
 }
 
 void AudioDriver::setI2sPort(i2s_port_t i2s_port) {
-	this->i2sPort = constrain(i2s_port, I2S_NUM_0, I2S_NUM_MAX);
+	this->i2sPort = constrain(i2s_port, I2S_NUM_0, I2S_NUM_1);
 }
 
 int AudioDriver::setFormat(int fs, int channelCount, i2s_bits_per_sample_t bitsPerSample, i2s_comm_format_t format, int alignment, int mclkFactor) {
