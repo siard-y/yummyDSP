@@ -117,7 +117,7 @@ void ES8388::setI2CPins(int I2C_CLK, int I2C_DATA) {
 
 
 int ES8388::setup(int fs, int channelCount, int bitClkPin, int lrClkPin, int dataOutPin, int dataInPin, int enablePin, i2s_port_t i2s_port) {
-	this->i2sPort = constrain(i2s_port, I2S_NUM_0, I2S_NUM_MAX);
+	this->i2sPort = constrain(i2s_port, I2S_NUM_0, I2S_NUM_1);
 	this->setI2CPins();
     /*
 	static uint8_t volume = 5;
